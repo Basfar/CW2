@@ -1,9 +1,5 @@
 const logger = (req, res, next) => {
-    console.log({
-        method: req.method,
-        url: req.url,
-        status: res.statusCode
-    });
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
 
     next();
 };
